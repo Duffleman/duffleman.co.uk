@@ -1,0 +1,11 @@
+$enable-flex: true;
+$enable-rounded: false;
+$enable-gradients: true;
+$enable-transitions: true;
+
+@import 'bootstrap/bootstrap';
+
+body {
+	font-family: 'Amatic SC', cursive;
+	font-size: 2rem;
+}
