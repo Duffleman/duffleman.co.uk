@@ -1,3 +1,9 @@
 body {
 	background-image: url('../img/bg.png');
 }
+
+img.bg {
+	border: 1px solid rgba(0,0,0,.125);
+	height: 35px;
+	width: 35px;
+}
