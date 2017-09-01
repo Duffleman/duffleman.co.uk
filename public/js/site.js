@@ -6,6 +6,13 @@ for (const el of switcher) {
 		switchBackground(el);
 		ev.preventDefault();
 	});
+
+	if (window.localStorage) {
+		const lastItem = localStorage.getItem('background');
+
+		if (lastItem)
+			body.style.background = lastItem;
+	}
 }
 
 function switchBackground(el) {
@@ -13,7 +20,8 @@ function switchBackground(el) {
 	const src = img.src;
 	const newSrc = `url('${src}')`;
 
-	console.log(newSrc);
+	if (window.localStorage)
+		localStorage.setItem('background', newSrc);
 
 	body.style.background = newSrc;
 }
