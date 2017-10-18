@@ -1,6 +1,7 @@
 var app = new Vue({
 	el: '#dflBody',
 	data: {
+		current: null,
 		backgrounds: [
 			'regal',
 			'topography',
@@ -16,12 +17,25 @@ var app = new Vue({
 			'memphis-colorful',
 			'gaming-pattern',
 		],
+		gamingBackgrounds: [
+			'playstation-pattern',
+			'gaming-pattern',
+		],
 	},
 
 	mounted: function() {
 		var item = this.loadStorage('background', 'bg');
 
 		this.changeBg(item);
+	},
+
+	computed: {
+		gamingMode: function () {
+			if (this.gamingBackgrounds.includes(this.current))
+				return true;
+
+			return false;
+		}
 	},
 
 	methods: {
@@ -35,6 +49,8 @@ var app = new Vue({
 			var css = 'url(' + fileUrl + ')';
 
 			this.saveStorage('background', file);
+
+			this.current = file;
 
 			body.style.background = css;
 		},
