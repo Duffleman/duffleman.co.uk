@@ -9,8 +9,8 @@
 	<link rel="stylesheet" href="css/site.css">
 </head>
 
-<body id="dflBody">
-	<div class="container">
+<body>
+	<div class="container" id="dflBody">
 		<div class="row justify-content-center">
 			<div class="col-sm-6">
 				<div class="card mt-3 p-3">
@@ -24,20 +24,11 @@
 								<li class="nav-item"><a href="https://github.com/Duffleman" class="nav-link">GitHub</a></li>
 								<li class="nav-item"><a href="mailto:hello@duffleman.co.uk" class="nav-link">Email</a></li>
 							</ul>
-							<div>
-								<a class="switcher" href="#"><img class="bg mb-1" src="img/regal.png"></a>
-								<a class="switcher" href="#"><img class="bg mb-1" src="img/topography.png"></a>
-								<a class="switcher" href="#"><img class="bg mb-1" src="img/symphony.png"></a>
-								<a class="switcher" href="#"><img class="bg mb-1" src="img/sayagata.png"></a>
-								<a class="switcher" href="#"><img class="bg mb-1" src="img/pow-star.png"></a>
-								<a class="switcher" href="#"><img class="bg mb-1" src="img/playstation-pattern.png"></a>
-								<a class="switcher" href="#"><img class="bg mb-1" src="img/paisley.png"></a>
-								<a class="switcher" href="#"><img class="bg mb-1" src="img/geometry2.png"></a>
-								<a class="switcher" href="#"><img class="bg mb-1" src="img/confectionary.png"></a>
-								<a class="switcher" href="#"><img class="bg mb-1" src="img/bg.png"></a>
-								<a class="switcher" href="#"><img class="bg mb-1" src="img/doodles.png"></a>
-								<a class="switcher" href="#"><img class="bg mb-1" src="img/memphis-colorful.png"></a>
-								<a class="switcher" href="#"><img class="bg mb-1" src="img/gaming-pattern.png"></a>
+							<div class="container">
+								<div class="row">
+									<img class="bg mb-1 mx-auto" v-on:click="changeBg(img)" :src="getUrl(img)" v-for="img in backgrounds">
+								</div>
+							</div>
 							</div>
 						</div>
 					</div>
@@ -45,6 +36,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.min.js"></script>
 	<script src="js/site.js"></script>
 </body>
 </html>

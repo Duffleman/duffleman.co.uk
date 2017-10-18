@@ -1,27 +1,61 @@
-const switcher = document.getElementsByClassName('switcher');
-const body = document.getElementById('dflBody');
+var app = new Vue({
+	el: '#dflBody',
+	data: {
+		backgrounds: [
+			'regal',
+			'topography',
+			'symphony',
+			'sayagata',
+			'pow-star',
+			'playstation-pattern',
+			'paisley',
+			'geometry2',
+			'confectionary',
+			'bg',
+			'doodles',
+			'memphis-colorful',
+			'gaming-pattern',
+		],
+	},
 
-for (const el of switcher) {
-	el.addEventListener('click', (ev) => {
-		switchBackground(el);
-		ev.preventDefault();
-	});
+	mounted: function() {
+		var item = this.loadStorage('background', 'bg');
 
-	if (window.localStorage) {
-		const lastItem = localStorage.getItem('background');
+		this.changeBg(item);
+	},
 
-		if (lastItem)
-			body.style.background = lastItem;
+	methods: {
+		getUrl (file) {
+			return 'img/' + file + '.png';
+		},
+
+		changeBg (file) {
+			var fileUrl = this.getUrl(file);
+			var body = document.body;
+			var css = 'url(' + fileUrl + ')';
+
+			this.saveStorage('background', file);
+
+			body.style.background = css;
+		},
+
+		saveStorage(key, val) {
+			if (window.localStorage) {
+				window.localStorage.setItem(key, val);
+
+				return val;
+			}
+		},
+
+		loadStorage(key, def) {
+			if (window.localStorage) {
+				var item = window.localStorage.getItem(key);
+
+				if (item)
+					return item;
+			}
+
+			return def;
+		}
 	}
-}
-
-function switchBackground(el) {
-	const img = el.childNodes[0];
-	const src = img.src;
-	const newSrc = `url('${src}')`;
-
-	if (window.localStorage)
-		localStorage.setItem('background', newSrc);
-
-	body.style.background = newSrc;
-}
+});
