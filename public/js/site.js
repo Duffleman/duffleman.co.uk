@@ -43,16 +43,15 @@ var app = new Vue({
 		},
 
 		changeBg (file) {
-			var fileUrl = this.getUrl(file);
-			var body = document.body;
-			var css = 'url(' + fileUrl + ')';
-
 			if (!this.backgrounds.includes(file))
 				throw new Error('cannot_change_bg');
 
 			this.saveStorage('background', file);
-
 			this.current = file;
+
+			var fileUrl = this.getUrl(file);
+			var body = document.body;
+			var css = 'url(' + fileUrl + ')';
 
 			body.style.background = css;
 		},
