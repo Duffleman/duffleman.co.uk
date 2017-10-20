@@ -7,7 +7,6 @@ var app = new Vue({
 			'topography',
 			'symphony',
 			'sayagata',
-			'pow-star',
 			'playstation-pattern',
 			'paisley',
 			'geometry2',
