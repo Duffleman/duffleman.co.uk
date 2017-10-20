@@ -11,3 +11,7 @@ img.bg {
 ul {
 	list-style: none;
 }
+
+[v-cloak] {
+	display: none;
+}
