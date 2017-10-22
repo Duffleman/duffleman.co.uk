@@ -24,44 +24,13 @@
 							<p class="card-text">My name is George, I work for <a href="https://cuvva.com">Cuvva</a>!</p>
 							<ul class="nav justify-content-center mb-3">
 								<li class="nav-item"><a href="https://twitter.com/Duffleman" class="nav-link">Twitter</a></li>
+								<li class="nav-item"><a href="https://steamcommunity.com/id/duffleman" class="nav-link">Steam</a></li>
 								<li class="nav-item"><a href="https://github.com/Duffleman" class="nav-link">GitHub</a></li>
 								<li class="nav-item"><a href="mailto:hello@duffleman.co.uk" class="nav-link">Email</a></li>
 							</ul>
 							<div class="container">
 								<div class="row">
-									<img class="bg mb-1 mx-auto" v-on:click="changeBg(img)" :src="getUrl(img)" v-for="img in backgrounds">
-								</div>
-							</div>
-							<div v-cloak v-show="gamingMode">
-								<hr>
-								<h2>Gaming</h2>
-
-								<a href="https://discord.gg/N23kpsa">Join the Discord</a>
-
-								<div class="text-left">
-									<h3>Platforms</h3>
-									<ul>
-										<li>🖥 PC Master Race</li>
-										<ul>
-											<li>AMD Ryzen Threadripper 1950</li>
-											<li>ASUS GeForce GTX 1080Ti x2 SLI</li>
-											<li>32 GB RAM</li>
-											<li>512 GB m.2</li>
-											<li><a href="https://i.redd.it/2d5lfmso3g1z.jpg">6 monitors</a></li>
-										</ul>
-										<li>🎮 Xbox One</li>
-										<li>📱 iPhone 7 Plus</li>
-									</ul>
-								</div>
-
-								<div class="text-left">
-									<h3>Games</h3>
-									<ul>
-										<li>🔫 PLAYERUNKNOWN'S BATTLEGROUNDS</li>
-										<li>💣 Tom Clancy's Rainbox Six Siege</li>
-										<li>🏎 Rocket League</li>
-										<li>🧝‍♂️ Middle-earth: Shadow of War</li>
-									</ul>
+									<img class="bg mb-1 mx-auto" v-on:click="applyTheme(theme)" :src="theme.thumbnail" v-for="theme in themes">
 								</div>
 							</div>
 						</div>
@@ -70,7 +39,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.min.js"></script>
-	<script src="js/site.js"></script>
+	<script type="module" src="js/site.js"></script>
 </body>
 </html>

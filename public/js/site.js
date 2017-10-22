@@ -1,78 +1,41 @@
-var app = new Vue({
+import Themes from './themes/index.js';
+import Vue from './vue.js';
+
+new Vue({
 	el: '#dflBody',
+
 	data: {
-		current: null,
-		backgrounds: [
-			'regal',
-			'topography',
-			'symphony',
-			'sayagata',
-			'playstation-pattern',
-			'paisley',
-			'geometry2',
-			'confectionary',
-			'bg',
-			'doodles',
-			'memphis-colorful',
-			'gaming-pattern',
-		],
-		gamingBackgrounds: [
-			'playstation-pattern',
-			'gaming-pattern',
-		],
+		themes: [],
 	},
 
-	mounted: function() {
-		var item = this.loadStorage('background', 'bg');
+	mounted() {
+		this.themes = Themes;
 
-		this.changeBg(item);
-	},
-
-	computed: {
-		gamingMode: function () {
-			if (this.gamingBackgrounds.includes(this.current))
-				return true;
-
-			return false;
-		}
+		this.loadTheme();
 	},
 
 	methods: {
-		getUrl (file) {
-			return 'img/' + file + '.png';
+		applyTheme(theme) {
+			this.saveTheme(theme);
+
+			new theme();
 		},
 
-		changeBg (file) {
-			if (!this.backgrounds.includes(file))
-				throw new Error('cannot_change_bg');
-
-			this.saveStorage('background', file);
-			this.current = file;
-
-			var fileUrl = this.getUrl(file);
-			var body = document.body;
-			var css = 'url(' + fileUrl + ')';
-
-			body.style.background = css;
+		saveTheme(theme) {
+			if (window.localStorage)
+				window.localStorage.setItem('theme', theme.name);
 		},
 
-		saveStorage(key, val) {
+		loadTheme() {
 			if (window.localStorage) {
-				window.localStorage.setItem(key, val);
+				var item = window.localStorage.getItem('theme');
 
-				return val;
+				if (item) {
+					const theme = Themes.find(t => t.name === item);
+
+					new theme();
+				}
 			}
-		},
-
-		loadStorage(key, def) {
-			if (window.localStorage) {
-				var item = window.localStorage.getItem(key);
-
-				if (item)
-					return item;
-			}
-
-			return def;
 		}
-	}
+	},
 });
