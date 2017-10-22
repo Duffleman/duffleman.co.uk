@@ -29,10 +29,10 @@
 							</ul>
 							<div class="container">
 								<div class="row">
-									<img class="bg mb-1 mx-auto" v-on:click="changeBg(img)" :src="getUrl(img)" v-for="img in backgrounds">
+									<img class="bg mb-1 mx-auto">
 								</div>
 							</div>
-							<div v-cloak v-show="gamingMode">
+							<div>
 								<hr>
 								<h2>Gaming</h2>
 
@@ -70,7 +70,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.min.js"></script>
+	<script src="https://unpkg.com/vue"></script>
 	<script src="js/site.js"></script>
 </body>
 </html>
