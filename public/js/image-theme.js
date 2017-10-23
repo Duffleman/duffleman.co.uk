@@ -9,10 +9,13 @@ export default class ImageTheme extends Theme {
 		}
 
 		const name = new.target.name;
-		const file = name.toLowerCase();
 
+		this.file = name.toLowerCase();
+	}
+
+	apply() {
 		this.applyCss({
-			backgroundImage: `url(img/${file}.png)`,
+			backgroundImage: `url(img/${this.file}.png)`,
 		})
 	}
 }

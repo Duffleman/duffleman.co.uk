@@ -5,6 +5,7 @@ new Vue({
 	el: '#dflBody',
 
 	data: {
+		activeTheme: null,
 		themes: [],
 	},
 
@@ -18,7 +19,8 @@ new Vue({
 		applyTheme(theme) {
 			this.saveTheme(theme);
 
-			new theme();
+			this.activeTheme = new theme();
+			this.activeTheme.apply();
 		},
 
 		saveTheme(theme) {
@@ -33,7 +35,7 @@ new Vue({
 				if (item) {
 					const theme = Themes.find(t => t.name === item);
 
-					new theme();
+					this.applyTheme(theme);
 				}
 			}
 		}
