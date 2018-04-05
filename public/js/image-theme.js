@@ -16,6 +16,6 @@ export default class ImageTheme extends Theme {
 	apply() {
 		this.applyCss({
 			backgroundImage: `url(img/${this.file}.png)`,
-		})
+		});
 	}
 }
