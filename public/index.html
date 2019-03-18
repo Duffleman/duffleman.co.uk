@@ -40,5 +40,20 @@
 		</div>
 	</div>
 	<script type="module" src="js/site.js"></script>
+	<!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+	<script>
+		(function (f, a, t, h, o, m) {
+			a[h] = a[h] || function () {
+				(a[h].q = a[h].q || []).push(arguments)
+			};
+			o = f.createElement('script'),
+				m = f.getElementsByTagName('script')[0];
+			o.async = 1; o.src = t; o.id = 'fathom-script';
+			m.parentNode.insertBefore(o, m)
+		})(document, window, '//fathom.dfl.mn/tracker.js', 'fathom');
+		fathom('set', 'siteId', 'ABUVH');
+		fathom('trackPageview');
+	</script>
+	<!-- / Fathom -->
 </body>
 </html>
