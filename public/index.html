@@ -1,59 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="/css/normalize.css" />
+	<link rel="stylesheet" href="/css/terminal.css" />
 	<title>Duffleman</title>
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/site.css">
 </head>
 
-<body>
-	<div class="container" id="dflBody">
-		<div class="row justify-content-center">
-			<div class="col-sm-6">
-				<div class="card mt-3 p-3">
-					<div class="card-block">
-						<div class="text-center">
-							<h1 class="card-title">Duffleman</h1>
-							<p class="card-text"><a href="https://keybase.io/Duffleman">EB4A 926B 4356 C76E</a></p>
-							<p class="card-text">My name is George, I work for <a href="https://cuvva.com">Cuvva</a>!</p>
-							<ul class="nav justify-content-center mb-3">
-								<li class="nav-item"><a href="https://twitter.com/Duffleman" class="nav-link">Twitter</a></li>
-								<li class="nav-item"><a href="https://steamcommunity.com/id/duffleman" class="nav-link">Steam</a></li>
-								<li class="nav-item"><a href="https://github.com/Duffleman" class="nav-link">GitHub</a></li>
-								<li class="nav-item"><a href="mailto:hello@duffleman.co.uk" class="nav-link">Email</a></li>
-							</ul>
-							<div class="container">
-								<div class="row">
-									<img class="bg mb-1 mx-auto" v-on:click="applyTheme(theme)" :src="theme.thumbnail" v-for="theme in themes">
-								</div>
-							</div>
-						</div>
-					</div>
+<body class="terminal">
+	<div class="container">
+		<div class="terminal-nav">
+			<div class="terminal-logo">
+				<div class="logo terminal-prompt">
+					<a href="/" class="no-style">DFL</a>
 				</div>
 			</div>
+			<nav class="terminal-menu">
+				<ul>
+					<li><a class="menu-item" href="https://twitter.com/Duffleman">Twitter</a></li>
+					<li><a class="menu-item" href="https://steamcommunity.com/id/duffleman">Steam</a></li>
+					<li><a class="menu-item" href="https://github.com/Duffleman">GitHub</a></li>
+					<li><a class="menu-item" href="https://keybase.io/Duffleman">Keybase</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div>
+			<p>My name is George, I work for <a href="https://cuvva.com">Cuvva</a>!</p>
+			<p>You can <a href="https://keybase.io/encrypt#duffleman">send an encrypted message</a> to me.</p>
 		</div>
 	</div>
-	<script type="module" src="js/site.js"></script>
-	<!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
-	<script>
-		(function (f, a, t, h, o, m) {
-			a[h] = a[h] || function () {
-				(a[h].q = a[h].q || []).push(arguments)
-			};
-			o = f.createElement('script'),
-				m = f.getElementsByTagName('script')[0];
-			o.async = 1; o.src = t; o.id = 'fathom-script';
-			m.parentNode.insertBefore(o, m)
-		})(document, window, '//fathom.dfl.mn/tracker.js', 'fathom');
-		fathom('set', 'siteId', 'ABUVH');
-		fathom('trackPageview');
-	</script>
-	<!-- / Fathom -->
 </body>
+
 </html>
