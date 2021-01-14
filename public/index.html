@@ -37,20 +37,13 @@
 			min-width: 8rem;
 		}
 
-		.header {
-			text-align: center;
-		}
-
-		.text-reset {
-			color: inherit !important;
-		}
-
-		.text-decoration-none {
-			text-decoration: none;
-		}
-
 		.text-center {
 			text-align: center;
+		}
+
+		a,
+		a:visited {
+			color: rgb(85, 61, 109);
 		}
 
 		h1 {
@@ -60,26 +53,32 @@
 			font-size: 2.5rem;
 		}
 
-		a:visited {
-			color: blue;
-		}
-
 		h2 {
 			margin: 0;
 			font-weight: normal;
 			font-size: 2rem;
 		}
 
-		.p-2 {
-			padding: 1rem;
-		}
-
-		.pb-2 {
+		.root {
 			padding-bottom: 1rem;
+			margin-top: 1.2rem;
 		}
 
-		.mt-3 {
-			margin-top: 1.2rem;
+		.icon-link {
+			color: inherit !important;
+			text-decoration: none;
+			padding-bottom: 0.5rem;
+		}
+
+		.icon {
+			padding: 1rem;
+			padding-bottom: 0.5rem;
+			font-size: 3rem;
+		}
+
+		.icon-text {
+			padding: 1rem;
+			padding-top: 0.5rem;
 		}
 
 		#fox {
@@ -116,9 +115,9 @@
 </head>
 
 <body>
-	<section class="pb-2 mt-3">
+	<section class="root">
 		<div class="container">
-			<div class="header">
+			<div class="text-center">
 				<img id="fox" src="img/arctic-fox.svg" />
 
 				<h1>Duffleman</h1>
@@ -130,52 +129,52 @@
 	<section>
 		<div class="container">
 			<div class="row">
-				<a href="https://github.com/Duffleman" class="text-reset text-decoration-none">
+				<a href="https://github.com/Duffleman" class="icon-link">
 					<div class="text-center">
-						<div class="p-2"><i class="fab fa-github" style="font-size:3rem;"></i></div>
-						<div class="p-2">GitHub</div>
+						<div class="icon"><i class="fab fa-github"></i></div>
+						<div class="icon-text">GitHub</div>
 					</div>
 				</a>
-				<a href="https://twitter.com/Duffleman" class="text-reset text-decoration-none">
+				<a href="https://twitter.com/Duffleman" class="icon-link">
 					<div class="text-center">
-						<div class="p-2"><i class="fab fa-twitter" style="font-size:3rem;"></i></div>
-						<div class="p-2">Twitter</div>
+						<div class="icon"><i class="fab fa-twitter"></i></div>
+						<div class="icon-text">Twitter</div>
 					</div>
 				</a>
-				<a href="#" class="text-reset text-decoration-none" data-toggle="tooltip" data-placement="top" title="Duffleman#0001">
+				<a href="#" class="icon-link" data-toggle="tooltip" data-placement="top" title="Duffleman#0001">
 					<div class="text-center">
-						<div class="p-2"><i class="fab fa-discord" style="font-size:3rem;"></i></div>
-						<div class="p-2">Discord</div>
+						<div class="icon"><i class="fab fa-discord"></i></div>
+						<div class="icon-text">Discord</div>
 					</div>
 				</a>
-				<a href="https://steamcommunity.com/id/duffleman" class="text-reset text-decoration-none">
+				<a href="https://steamcommunity.com/id/duffleman" class="icon-link">
 					<div class="text-center">
-						<div class="p-2"><i class="fab fa-steam" style="font-size:3rem;"></i></div>
-						<div class="p-2">Steam</div>
+						<div class="icon"><i class="fab fa-steam"></i></div>
+						<div class="icon-text">Steam</div>
 					</div>
 				</a>
-				<a href="https://keybase.io/Duffleman" class="text-reset text-decoration-none">
+				<a href="https://keybase.io/Duffleman" class="icon-link">
 					<div class="text-center">
-						<div class="p-2"><i class="fab fa-keybase" style="font-size:3rem;"></i></div>
-						<div class="p-2">Keybase</div>
+						<div class="icon"><i class="fab fa-keybase"></i></div>
+						<div class="icon-text">Keybase</div>
 					</div>
 				</a>
-				<a href="https://lowkey.gg/u/3c6debc8-ec6e-4c76-9e8c-f8d5570eba40" class="text-reset text-decoration-none">
+				<a href="https://lowkey.gg/u/3c6debc8-ec6e-4c76-9e8c-f8d5570eba40" class="icon-link">
 					<div class="text-center">
-						<div class="p-2"><i class="fas fa-video" style="font-size:3rem;"></i></div>
-						<div class="p-2">Clips</div>
+						<div class="icon"><i class="fas fa-video"></i></div>
+						<div class="icon-text">Clips</div>
 					</div>
 				</a>
-				<a href="https://wiki.dfl.mn/en/programming/projects" class="text-reset text-decoration-none">
+				<a href="https://wiki.dfl.mn/en/programming/projects" class="icon-link">
 					<div class="text-center">
-						<div class="p-2"><i class="fas fa-laptop-code" style="font-size:3rem;"></i></div>
-						<div class="p-2">Projects</div>
+						<div class="icon"><i class="fas fa-laptop-code"></i></div>
+						<div class="icon-text">Projects</div>
 					</div>
 				</a>
-				<a href="https://wiki.dfl.mn/en/user-guide" class="text-reset text-decoration-none">
+				<a href="https://wiki.dfl.mn/en/user-guide" class="icon-link">
 					<div class="text-center">
-						<div class="p-2"><i class="fas fa-book" style="font-size:3rem;"></i></div>
-						<div class="p-2">User guide</div>
+						<div class="icon"><i class="fas fa-book"></i></div>
+						<div class="icon-text">User guide</div>
 					</div>
 				</a>
 			</div>
