@@ -15,7 +15,8 @@
 	<link rel="stylesheet" href="tooltip.css">
 	<script src="https://kit.fontawesome.com/d9eed9f9e7.js" crossorigin="anonymous"></script>
 	<style>
-		html, body {
+		html,
+		body {
 			height: 100%;
 			font-family: 'Anonymous Pro', monospace;
 		}
@@ -94,6 +95,19 @@
 				position: fixed;
 				bottom: 0;
 				left: 0;
+			}
+		}
+
+		@media (prefers-color-scheme: dark) {
+
+			html,
+			body {
+				background-color: rgb(26, 26, 26);
+				color: rgb(220, 220, 220);
+			}
+
+			a, a:visited {
+				color:rgb(199, 140, 253);
 			}
 		}
 	</style>
