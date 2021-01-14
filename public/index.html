@@ -15,7 +15,8 @@
 	<link rel="stylesheet" href="tooltip.css">
 	<script src="https://kit.fontawesome.com/d9eed9f9e7.js" crossorigin="anonymous"></script>
 	<style>
-		body {
+		html, body {
+			height: 100%;
 			font-family: 'Anonymous Pro', monospace;
 		}
 
@@ -78,6 +79,23 @@
 		.mt-3 {
 			margin-top: 1.2rem;
 		}
+
+		#fox {
+			width: 150px;
+			margin-bottom: 1rem;
+		}
+
+		section#credits {
+			padding: 0.2rem;
+		}
+
+		@media only screen and (min-width: 1040px) and (min-height: 480px) {
+			section#credits {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+			}
+		}
 	</style>
 </head>
 
@@ -85,6 +103,8 @@
 	<section class="pb-2 mt-3">
 		<div class="container">
 			<div class="header">
+				<img id="fox" src="img/arctic-fox.svg" />
+
 				<h1>Duffleman</h1>
 				<h2>George Miller</h2>
 				<p>My name is George, and I work for <a href="https://cuvva.com">Cuvva</a>.</p>
@@ -144,6 +164,9 @@
 				</a>
 			</div>
 		</div>
+	</section>
+	<section id="credits">
+		<small>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small>
 	</section>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
